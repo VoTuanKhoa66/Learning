@@ -9,10 +9,8 @@ def ask_ok(prompt, retries=4, reminder='Please try again!'):
         if retries < 0:
             raise ValueError('invalid user response')
         print(reminder)
-
 # a = ask_ok("Ok to overwite the file?", 3, reminder='Please try again!')
 # print(a)
-
 def f(a, L=[]):
     L.append(a)
     return L
