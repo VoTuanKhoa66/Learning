@@ -4,7 +4,8 @@ print("doesn't")  # ...or use double quotes instead
 s = 'First line.\nSecond line.'  # \n means newline
 print(s)  # with print(), special characters are interpreted, so \n produces new line
 
-print('C:\some\name')  # here \n means newline!
+print('C:\\some\name')  # here \n means newline!
+
 print(r'C:\some\name')  # note the r before the quote
 
 #One way is using triple-quotes: """...""" or '''...'''
