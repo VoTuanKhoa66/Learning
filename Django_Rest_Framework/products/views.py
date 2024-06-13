@@ -131,7 +131,7 @@ class ProductImageAPIView(views.APIView):
     def post(self, request, product_id_slug):
         try:
             data = parse_request(request)
-            product = Product.objects.get(id=data['product_id'])
+            product = Product.objects.get(id=product_id_slug)
             product_image = ProductImage(
                 product_id = product,
                 image_url = data['image_url']
@@ -197,14 +197,13 @@ class ProductCommentAPIView(views.APIView):
     def post(self, request, product_id_slug):
         try:
             data = parse_request(request)
-            product = Product.objects.get(id=data['product_id'])
+            product = Product.objects.get(id=product_id_slug)
             user = User.objects.get(id=data['user_id'])
             product_comment = ProductComment(
                 product_id = product,
                 rating = data['rating'],
                 comment = data['comment'],
                 user_id = user,
-                parent_id = data['parent_id']
             )
             product_comment.save()
             serializer = ProductCommentSerializer(product_comment)
