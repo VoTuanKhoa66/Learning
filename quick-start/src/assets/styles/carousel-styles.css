@@ -1,0 +1,11 @@
+.carousel__pagination-button--active::after{
+    background-color: #fff;
+}
+
+.carousel__prev, .carousel__next{
+    color: grey;
+}
+
+.carousel__prev :hover, .carousel__next :hover{
+    color: #fff;
+}

@@ -1,0 +1,17 @@
+:root{
+    --dark: #141414
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: #141414;
+    color: white;
+    overflow-x: hidden;
+    margin-bottom: 100px;
+    height: 100vh;
+}
